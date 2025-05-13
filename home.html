@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<section class="hero">
+    <h2>Welcome to the Blood Bank Management System</h2>
+    <p>Connecting blood donors with recipients to save lives</p>
+    
+    <div class="cta-buttons">
+        <a href="{{ url_for('donor_register') }}" class="btn btn-primary">Register as Donor</a>
+        <a href="{{ url_for('recipient_register') }}" class="btn btn-secondary">Register as Recipient</a>
+    </div>
+</section>
+
+<section class="info">
+    <div class="info-card">
+        <h3>For Donors</h3>
+        <p>Your donation can save up to three lives. Register as a donor, schedule your donations, and track your contribution history.</p>
+        <a href="{{ url_for('donor_register') }}">Register Now</a>
+    </div>
+    
+    <div class="info-card">
+        <h3>For Recipients</h3>
+        <p>Find compatible blood donors for your medical needs. Register as a recipient to check availability and request blood.</p>
+        <a href="{{ url_for('recipient_register') }}">Register Now</a>
+    </div>
+    
+    <div class="info-card">
+        <h3>About Blood Donation</h3>
+        <p>Blood donation is a simple process that takes about 10-15 minutes. The entire appointment, including registration, donation, and refreshments, takes about an hour.</p>
+        <a href="#">Learn More</a>
+    </div>
+</section>
+{% endblock %}

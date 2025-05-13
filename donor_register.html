@@ -1,0 +1,53 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<section class="form-container">
+    <h2>Donor Registration</h2>
+    
+    <form method="POST">
+        <div class="form-group">
+            <label for="name">Full Name</label>
+            <input type="text" id="name" name="name" required>
+        </div>
+        
+        <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required>
+        </div>
+        
+        <div class="form-group">
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" required>
+        </div>
+        
+        <div class="form-group">
+            <label for="blood_type">Blood Type</label>
+            <select id="blood_type" name="blood_type" required>
+                <option value="A+">A+</option>
+                <option value="A-">A-</option>
+                <option value="B+">B+</option>
+                <option value="B-">B-</option>
+                <option value="AB+">AB+</option>
+                <option value="AB-">AB-</option>
+                <option value="O+">O+</option>
+                <option value="O-">O-</option>
+            </select>
+        </div>
+        
+        <div class="form-group">
+            <label for="phone">Phone Number</label>
+            <input type="tel" id="phone" name="phone" required>
+        </div>
+        
+        <div class="form-group">
+            <label for="address">Address</label>
+            <textarea id="address" name="address" rows="3"></textarea>
+        </div>
+        
+        <button type="submit" class="btn btn-primary">Register</button>
+    </form>
+    
+    <p>Already have an account? <a href="{{ url_for('donor_login') }}">Login here</a></p>
+</section>
+{% endblock %}
+```
